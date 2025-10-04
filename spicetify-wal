@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+refresh() {
+    cp ~/.cache/wal/colors-spicetify.ini ~/.config/spicetify/Themes/wal/color.ini
+    spicetify apply
+}
+
+make-template() {
+    cat <<EOF > ~/.config/wal/templates/colors-spicetify.ini
+[Base]
+sidebar       = {color0.strip}
+player        = 181a1b
+main          = 0c0d0e
+
+; Accents
+button        = {color1.strip}
+button-active = {color3.strip}
+EOF
+wal -R
+}
+
+if [ ! -f "~/.cache/wal/colors-spicetify.ini" ]
+then
+    make-template &&
+    refresh
+else
+    refresh
+fi
