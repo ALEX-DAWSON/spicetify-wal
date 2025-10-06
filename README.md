@@ -24,7 +24,9 @@ wal -i path/to/image -o ~/.config/spicetify/Themes/wal/spicetify-wal
 
 ---
 ## Screenshots
-Coming soon....
+![1](./images/1.png)
+![2](./images/2.png)
+![3](./images/3.png)
 
 ---
 ## More
